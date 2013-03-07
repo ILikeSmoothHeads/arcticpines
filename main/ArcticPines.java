@@ -150,8 +150,8 @@ public class ArcticPines extends ActiveScript implements PaintListener, MessageL
 			    g.setFont(Variables.font1);
 			    g.setColor(Color.BLACK);
 			    g.drawString("" + format(Variables.currentTime), 140, 411);
-			    g.drawString("" + Variables.logsChopped + "  (" + Variables.logsHour + " per hour)", 173, 445);
-			    g.drawString("" + Variables.wcGainedXp + "  (" + Variables.xpHour + " per hour)", 150, 480);
+			    g.drawString("" + Variables.logsChopped + "  (" + Variables.logsHour + "/hour)", 173, 445);
+			    g.drawString("" + Variables.wcGainedXp + "  (" + Variables.xpHour + "/hour)", 150, 480);
 			    g.drawString("" + Variables.urnsFilled, 395, 445);
 			    g.drawString("" + Variables.nestsLooted, 405, 411);
 			    //g.drawString("" + Variables.profit+ "gp", 165, 519);
