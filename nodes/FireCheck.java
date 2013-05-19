@@ -25,21 +25,27 @@ public class FireCheck extends Node{
 	@Override
 	public void execute() {
 		Variables.status = "Moving from fire";
+		System.out.println("Fire - moving");
 		SceneObject fire = SceneEntities.getNearest(Variables.fire_ID);
-		if(Players.getLocal().getLocation().equals(Variables.choppingTiles[1]) || Players.getLocal().getLocation().equals(Variables.choppingTiles[0])){
-			Walking.walk(Variables.fireTile4);
-			sleep(1000,1200);
-			Camera.setPitch(50);
-		} else if(Players.getLocal().getLocation().equals(Variables.choppingTiles[2]) || Players.getLocal().getLocation().equals(Variables.choppingTiles[3])){
-			Walking.walk(Variables.fireTile2);
-			sleep(1000,1200);
-		} else if(Players.getLocal().getLocation().equals(Variables.choppingTiles[4]) || Players.getLocal().getLocation().equals(Variables.choppingTiles[5])){
-			Walking.walk(Variables.fireTile3);
-			sleep(1000,1200);
-		} else {
-			Walking.walk(Variables.fireTile1); 
-			System.out.println("not in area");
-			sleep(1000,1200);
+		if(!Players.getLocal().isMoving()){
+			if(Players.getLocal().getLocation().equals(Variables.choppingTiles[0]) || Players.getLocal().getLocation().equals(Variables.choppingTiles[1]) || Players.getLocal().getLocation().equals(Variables.choppingTiles[2])){
+				Walking.walk(Variables.fireTiles[0]);
+				sleep(2000,2200);
+			} else if(Players.getLocal().getLocation().equals(Variables.choppingTiles[3]) || Players.getLocal().getLocation().equals(Variables.choppingTiles[4]) || 
+					Players.getLocal().getLocation().equals(Variables.choppingTiles[5]) || Players.getLocal().getLocation().equals(Variables.choppingTiles[6])){
+				Walking.walk(Variables.fireTiles[1]);
+				sleep(2000,2200);
+			} else if(Players.getLocal().getLocation().equals(Variables.choppingTiles[7]) || Players.getLocal().getLocation().equals(Variables.choppingTiles[8]) || 
+					Players.getLocal().getLocation().equals(Variables.choppingTiles[9]) || Players.getLocal().getLocation().equals(Variables.choppingTiles[10])){
+				Walking.walk(Variables.fireTiles[2]);
+				sleep(2000,2200);
+			}else if(Players.getLocal().getLocation().equals(Variables.choppingTiles[11])){
+					Walking.walk(Variables.fireTiles[4]);
+					sleep(2000,2200);
+			} else {
+				Walking.walk(Variables.fireTiles[3]); 
+				sleep(2000,2200);
+			}
 		}
 			
 		

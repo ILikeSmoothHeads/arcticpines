@@ -18,6 +18,7 @@ public class WalkToArea extends Node{
 
 	@Override
 	public void execute() {
+		System.out.println("Walking to area");
 		Variables.status = "Walking to area";
 		Walking.walk(Variables.choppingTiles[2]);
 		

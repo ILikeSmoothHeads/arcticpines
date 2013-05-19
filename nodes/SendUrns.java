@@ -17,11 +17,12 @@ public class SendUrns extends Node {
 
 	@Override
 	public void execute() {
+		System.out.println("Sending Urns");
 		Variables.status = "Sending Urn";
 		if(!Variables.teleButton.visible()){
 			Inventory.getItem(Variables.fullUrn_ID).getWidgetChild().interact("Teleport urn");
 			sleep(800,900);
-			Variables.urnsFilled++;
+			
 		}
 		if(Variables.teleButton.visible()){
 			Variables.teleButton.click(true);

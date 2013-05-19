@@ -28,12 +28,15 @@ public class LightLogs extends Node {
 	public void execute() {
 		SceneObject tree = SceneEntities.getNearest(Variables.arcticPine_ID);
 		int x = Inventory.getCount(Variables.articLogs_ID);
-		
+		System.out.println("Drop");
 		Variables.status = "Dropping logs";
 		for(int i = 0; i <= x; i++){
 			Keyboard.sendKey('1');
 		}
+		
+		
 	
+		System.out.println("Chop");
 		Variables.status = "Chopping trees";
 		//Variables.logsChopped++;
 		tree.interact("Chop");

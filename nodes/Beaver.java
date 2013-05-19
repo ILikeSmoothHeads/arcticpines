@@ -20,6 +20,7 @@ public class Beaver extends Node {
 
 	@Override
 	public void execute() {
+		System.out.println("Summoning beaver");
 		Variables.status = "Summoning Beaver";
 		if(Inventory.getItem(Variables.beaver_ID) != null){
 			Inventory.getItem(Variables.beaver_ID).getWidgetChild().interact("Summon");

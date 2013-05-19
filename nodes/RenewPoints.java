@@ -23,6 +23,7 @@ public class RenewPoints extends Node{
 
 	@Override
 	public void execute() {
+		System.out.println("Renewing points");
 		if(Inventory.contains(Variables.summPots)) {
 			Variables.status = "Drinking potion";
 			Inventory.getItem(Variables.summPots).getWidgetChild().interact("Drink");
@@ -43,7 +44,7 @@ public class RenewPoints extends Node{
 				}
 			}
 			if(Variables.bridgeSide2.contains(Players.getLocal().getLocation()) && !obelisk.isOnScreen()){
-				Walking.walk(Variables.obeliskTile);
+				//Walking.walk(Variables.obeliskTile);
 				sleep(1000,1200);
 			}
 			Variables.status = "Renewing points";

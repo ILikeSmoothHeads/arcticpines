@@ -230,7 +230,7 @@ public class Gui extends JFrame {
 		Variables.beaver = beaverButton.isSelected();
 		Variables.urns = urnButton.isSelected();
 		Variables.nests = nestButton.isSelected();
-		//Variables.banking = obeliskButton.isSelected();
+		Variables.banking = obeliskButton.isSelected();
 		
 		Variables.guiOpen = false;
 		this.dispose();
@@ -248,7 +248,7 @@ public class Gui extends JFrame {
 	startButton = new JButton();
 	label6 = new JLabel();
 	obeliskButton = new JRadioButton();
-	obeliskButton.setEnabled(false);
+	//obeliskButton.setEnabled(false);
 
 	//======== this ========
 	setFont(new Font("Dialog", Font.PLAIN, 14));
